@@ -1148,10 +1148,6 @@ input:checked + .toggle-bg {
   margin-right: 0.75rem;
 }
 
-.mr-8 {
-  margin-right: 2rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1234,10 +1230,6 @@ input:checked + .toggle-bg {
 
 .h-64 {
   height: 16rem;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .min-h-full {
@@ -1631,11 +1623,6 @@ input:checked + .toggle-bg {
   padding-right: 0.5rem;
 }
 
-.px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1751,20 +1738,8 @@ input:checked + .toggle-bg {
   padding-top: 0.75rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pt-0 {
-  padding-top: 0px;
 }
 
 .text-left {
@@ -1778,6 +1753,11 @@ input:checked + .toggle-bg {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -2385,6 +2365,18 @@ input:checked + .toggle-bg {
     margin-bottom: 2rem;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .md\:mr-8 {
+    margin-right: 2rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -2399,6 +2391,10 @@ input:checked + .toggle-bg {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:max-w-md {
+    max-width: 28rem;
   }
 
   .md\:grid-cols-2 {
@@ -2440,6 +2436,21 @@ input:checked + .toggle-bg {
 
   .md\:p-0 {
     padding: 0px;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-black {
@@ -2498,9 +2509,22 @@ input:checked + .toggle-bg {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:px-28 {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:pl-28 {
+    padding-left: 7rem;
+  }
+
+  .lg\:pr-28 {
+    padding-right: 7rem;
   }
 
   .lg\:text-3xl {
