@@ -1,10 +1,9 @@
-<!-- https://www.quora.com/Is-SCSS-better-than-CSS?q=is%20scss%20 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" a content="CodeIN Blogs">
+    <meta name="title" content="CodeIN Blogs">
     <meta name="description"
         content="It is a blogging platform that allows users to write and publish articles on a wide range of topics where you can write easily.">
     <meta name="keywords"
@@ -19,8 +18,7 @@
 
     <link rel="stylesheet" href="blog.css">
 
-    <title>Is SCSS better than CSS?
-        - CodeIN Blogs </title>
+    <title>Tackling Diverse Tasks with Neural Architecture Search - CodeIN Blogs </title>
     <link rel="stylesheet" href="../style/output.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
@@ -28,14 +26,17 @@
 <body class="dark">
     <main class="w-full h-full flex flex-col items-center justify-center accent text-white py-10 px-6">
         <!-- Header -->
-        <h1 class=" text-2xl sm:text-3xl md:text-4xl  font-semibold text-center ">What is Coding? </h1>
+        <h1 class=" text-2xl sm:text-3xl md:text-4xl  font-semibold text-center ">Tackling Diverse Tasks with Neural
+            Architecture Search </h1>
         <div class="author flex mt-4">
             <div class="w-[50px] h-[50px] foreground-secondary rounded-full">
-                <img src="../assests/images/author1.png" alt="">
+                <a href="https://www.linkedin.com/mwlite/in/vineet-jadhav-577a531b4"><img
+                        src="../assests/images/avatarman.png" alt="Ameet Talwalkar"></a>
             </div>
             <div class="flex flex-col text-sm justify-center mx-2 font-medium">
-                <h1>Anshul Soni .</h1>
-                <p>Jan 27, 2023
+                <h1>Ameet Talwalkar
+                </h1>
+                <p>Dec 7, 2022
                 </p>
             </div>
         </div>
@@ -47,14 +48,17 @@
             <div class="w-full lg:w-[750px] lg:mr-16">
                 <!-- Overview of the post -->
 
-
                 <div class="overview">
 
+                    <br>
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">The past decade has witnessed the success of
+                        machine learning (ML) in solving diverse real-world problems, from facial recognition and
+                        machine translation to disease diagnosis and protein sequence prediction. However, progress in
+                        such areas has involved painstaking manual effort in designing and training task-specific neural
+                        networks, leveraging human and computational resources that most practitioners do not have
+                        access to.
 
-                    <p class="text-lg md:text-xl font-normal poppins">Back in the days, people used to have a number of
-                        problems while writing CSS. SCSS (Sassy CSS) which is the most commonly used syntax for CSS was
-                        derived from SASS (Syntactically Awesome Style Sheets). SCSS is a special type of file for SASS,
-                        a program written in Ruby that assembles CSS style sheets for a browser.
+
                     </p>
                 </div>
 
@@ -62,115 +66,74 @@
 
                 <div class="main-content "></div>
 
+
                 <div class="mt-6 section">
 
 
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins"> SCSS is like CSS with better formatting.
-
-                    </p>
-
-
-
-
-
-                </div>
-                <div class="mt-6 section">
-
                     <p class="mt-4 text-lg md:text-xl font-normal poppins">
-                        SCSS is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS
-                        as well. SCSS files use the extension .scss
+                        In contrast to this task-specific approach, general-purpose models such as DeepMind’s Perceiver
+                        IO and Gato and Google’s Pathway have been developed to solve more than one task at once.
+                        However, as these proprietary pretrained models are not publicly available, practitioners cannot
+                        even assess whether fine-tuning one of these models would work on their task of interest.
+                        Independently developing a general-purpose model from scratch is also infeasible due to the
+                        massive amount of compute and training data it requires.
+                        <br><br>
+
+                        A more accessible alternative is the field of automated machine learning (AutoML), which aims to
+                        obtain high-quality models for diverse tasks with minimal human effort and computational
+                        resources, as noted in a recent blogpost. In particular, we can use Neural Architecture Search
+                        (NAS) to automate the design of neural networks for different learning problems.
+
+                        <br><br>
+                        Indeed, compared with training large-scale transformer-based general-purpose models, many
+                        efficient NAS algorithms such as DARTS can be run on a single GPU and take a few hours to
+                        complete a simple task. However, while NAS has enabled fast and effective model development in
+                        well-studied areas such as computer vision, its application to domains beyond vision remains
+                        largely unexplored.
+
+                        <br><br>
+
+                        In fact, a major difficulty in applying NAS to more diverse problems is the trade-off between
+                        considering a sufficiently expressive set of neural networks and being able to efficiently
+                        search over this set. In this blog post, we will introduce our approach to find a suitable
+                        balance between expressivity and efficiency in NAS.
+                        <br><br>
+                        In our upcoming NeurIPS 2022 paper, we developed a NAS method called DASH that generates and
+                        trains task-specific convolutional neural networks (CNNs) with high prediction accuracy. Our
+                        core hypothesis is that for a broad set of problems (especially those with non-vision inputs
+                        such as audio and protein sequences), simply searching for the right kernel sizes and dilation
+                        rates for the convolutional layers in a CNN can achieve high-quality feature extraction and
+                        yield models competitive to expert-designed ones.
 
                         <br> <br>
-                        Being an extension of CSS3, in SCSS, we can add nested rules, variables, mixins, selector
-                        inheritance, and more. It’s translated to well-formatted, standard CSS using the command line
-                        tool or a web-framework plugin.
+                        We explicitly focus on extending the generalization ability of CNNs due to the well known
+                        effectiveness of convolutions as feature extractors, coupled with recent work demonstrating the
+                        success of modern CNNs on a variety of tasks (e.g., the state-of-the-art performance of the
+                        ConvNeXt model that incorporates many techniques used by Transformers).
+                        <br> <br>
+                        In the following, we will first discuss how DASH is inspired by and differs from existing NAS
+                        work. Then, we will introduce three novel “tricks” that improve the efficiency of searching over
+                        a diverse kernel space. Finally, we will present the empirical evaluation to demonstrate DASH’s
+                        effectiveness.
+
+
 
                     </p>
                     <br>
-                    <h1 class="text-xl sm:text-xl md:text-2xl xl:text-4xl font-semibold">CSS or SCSS - Which is better?
-
-
-                    </h1>
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
-                        CSS is the styling language which is used to style web pages and it is understandable by the
-                        browser. Using SCSS, we can add many additional functionalities to CSS such as variables,
-                        nesting and more. All these additional functionalities can make writing CSS much easier and
-                        faster as compared to writing the traditional CSS. SCSS produce a traditional CSS that the
-                        browser can understand by running the SCSS files on the server running your web app.
-
-
-                        <br> <br>
-                        Hundreds of programming languages exist, each with its own syntax and purpose. As with human
-                        languages, you’ll not find a single programming language you can use for all purposes.
-                    </p> <br>
-                    <h1 class="ext-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold">Advantages of using SCSS?
-
-
-                    </h1>
-                    <br>
-                    <ul class="mt-4 text-lg md:text-xl font-normal poppins">
-                        <li><b>• SCSS is more expressive
-                            </b> <br> We can compress several lines of code in SASS syntax into much less number of
-                            lines of SCSS. In SCSS, the standard lines can also be compressed when I'm doing something
-                            complicated and can be expanded again for reference.
-
-
-                        </li><br>
-                        <li><b>• It encourages proper nesting of rules
-                            </b>If you use the comma operator at a high level, it increases the file size of the final
-                            CSS. This can result in making the code really hard to perform overriding of rules.
-
-                        </li> <br>
-                        <li><b>• SCSS allows the user to write better inline documentation
-                            </b>SASS is flexible with comments, but any good developer will prefer inline documentation
-                            which is available in SCSS. Inline documentation makes the lines of code self-explanatory.
-
-
-                        </li>
-                        <br>
-                        <li><b>• Integrating existing CSS tools and CSS codebase is much easier
-                            </b>Syntax highlighting widely used CSS tool and is supported in SCSS. SCSS allows you to
-                            use the existing code, and help improve its internal structure without altering the external
-                            behavior of the code.
-
-
-                        </li> <br>
-
-                    </ul>
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
-                        Syntax highlighting widely used CSS tool and is supported in SCSS. SCSS allows you to use the
-                        existing code, and help improve its internal structure without altering the external behavior of
-                        the code.
-                        <br> <br> Additionally, SCSS allows us to declare and define variables, which finally helps us
-                        to normalize the code and reduce the redundancy. For example,
-                        <br> Instead of repeating #ff0000 many times in your CSS file, in SCSS, we can just set $red:
-                        #ff0000 once and use it as many times as we want.
-
-                        <br> <br> SCSS also supports the use of custom functions which accept parameters and are used to
-                        prevent unused repetitions. These functions are known as mixins.
-
-                        <br> <br> We can also inherit the properties of one selector into other selectors by making use
-                        of extensions.
-                        <br> <br>SCSS allows us to do math using operators. We can perform simple calculations inside
-                        our code for better output.
-
-
-
-
-                    </p>
-
-
-                    <br> <br>
+                    <address>Ameet Talwalkar
+                    </address>
                     <b>
                         THANKS FOR READING IT, <br>
                         CodeIN BLOGS
                     </b>
-                    <br> <br>
+                    </p>
                 </div>
+
+
             </div>
             <div class="mt-10 lg:-mt-5 more-articles items-center">
-                <h1 class="my-4 text-3xl font-bold text-center">
-                    More articles
+                <h1 class="my-4 text-3xl font-bold text-center">More Articles
+
                 </h1>
 
 
@@ -180,18 +143,27 @@
                     <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl ">
 
                         <img class="w-[250px] h-[150px] object-cover"
-                            src="https://2823d438-9de1-490e-9027-772b6790330d.id.repl.co/assets/images/blog-4.png"
-                            alt="">
-                        <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">What is
-                            Machine
-                            Learning ?
+                            src="https://codein-blogs.anshulsoni3.repl.co/assets/images/blog-6.jpg" alt="">
+                        <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">Will Chat GPT
+                            Replace Your Job As a Programmer?
                         </div>
                         <button class="view-more" role="button">
-                            <a href="articles/blog1.html">View Full Article</a>
+                            <a href="./is-chatgpt-going-to-replace-programmers.html">View Full Article</a>
                         </button>
 
                     </div>
 
+                    <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl">
+
+                        <img class="w-[250px] h-[150px] object-cover" src="../assests/images/blog-3.png" alt="">
+                        <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">What is
+                            Coding?
+                        </div>
+                        <button class="view-more" role="button">
+                            <a href="./what-is-coding.html">View Full Article</a>
+                        </button>
+
+                    </div>
                     <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl">
 
                         <img class="w-[250px] h-[150px] object-cover"
@@ -202,12 +174,10 @@
                             Learning ?
                         </div>
                         <button class="view-more" role="button">
-                            <a href="articles/blog1.html">View Full Article</a>
+                            <a href="./what-is-machine-learning.html">View Full Article</a>
                         </button>
 
                     </div>
-
-
 
 
                 </div>
