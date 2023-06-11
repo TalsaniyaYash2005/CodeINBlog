@@ -1,0 +1,19 @@
+html,body{ height:100% }
+
+body{ font-family: "Poppins", sans-serif }
+
+main{ min-height:100% }
+
+.small{ font-size: .75rem !important }
+
+.event-card-body::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:16px;
+  background-color:#fff;
+  top:-1rem;
+  left:0;
+  border-top-left-radius:1.5rem;
+  border-top-right-radius:1.5rem;
+}
