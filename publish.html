@@ -16,53 +16,58 @@
             <h2 class="mt-4 text-center text-2xl font-bold leading-9 tracking-tight text-white">Post New Article</h2>
 
             <div class="mt-8 sm:mx-auto sm:w-full">
-                <form class="space-y-6" action="#" method="POST">
+                <form class="space-y-6" action="https://formspree.io/f/xzbqnpkn" method="POST">
                     <div>
                         <div class="mt-2">
-                            <input placeholder="Enter your name" id="text" name="text" type="text" autocomplete="text"
+                            <input placeholder="Enter your name" id="text" name="Name of publisher" type="text" autocomplete="text"
                                 required
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
                     <div>
                         <div class="mt-2">
-                            <input placeholder="Enter your email id" id="email" name="email" type="email"
+                            <input placeholder="Enter your email id" id="email" name="email of publisher" type="email"
                                 autocomplete="email" required
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
                     <div>
                         <div class="mt-2">
-                            <input placeholder="Enter your topic" id="text" name="text" type="text" autocomplete="text"
+                            <input placeholder="Enter your topic" id="text" name="topic of article" type="text" autocomplete="text"
+                                required
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="my-3 text-sm text-gray-500">
+                            Write your article in any format you prefer. Don't worry about the formatting; our advanced algorithm will automatically format your article for you.                        </p>
+                        <div class="mt-2">
+                            <textarea id="message" rows="4" name="Content of Article" class="block p-2.5 w-full text-sm rounded-lg"
+                                placeholder="Write Article" required></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mt-2">
+                            <input placeholder="Article Category" id="text" name="Category of Article" type="text" autocomplete="text"
                                 required
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
                     <div>
                         <div class="mt-2">
-                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm rounded-lg"
-                                placeholder="Write your thoughts here..."></textarea>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mt-2">
-                            <input placeholder="Article Category" id="text" name="text" type="text" autocomplete="text"
-                                required
-                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mt-2">
-                            <input placeholder="Add Social Media Profile" id="text" name="text" type="text"
+                            <input placeholder="Add Social Media Profile" id="text" name="Social Profile Link" type="text"
                                 autocomplete="text" required
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
                     <div>
                         <div class="mt-2">
-                            <input placeholder="Link to Your Profile Image" id="text" name="text" type="text"
-                                autocomplete="text" required
+                            <input placeholder="Link to Your Profile Image(not required)" id="text" name="author img link" type="text"
+                                autocomplete="text" 
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+
+                                <span class="text-gray-600 mt-4"><input type="checkbox" name="UserVerify= Okay" required> I confirm that I have filled out all the required information accurately and completely.</span>
+
                         </div>
                     </div>
 
@@ -74,11 +79,13 @@
                 </form>
 
                 <p class="mt-4 text-center text-sm text-gray-500">
-                    Our team will review your article within 3-4 working days
+                    Our team will review your article within 2-3 working days
                 </p>
             </div>
         </div>
     </div>
+
+
 </body>
 
 
