@@ -12,102 +12,36 @@
 </head>
 <style>
     @media (max-width: 767px) {
-        .container-footer {
-            padding-left: 1.5rem;
-            /* Adjust as needed */
-            padding-right: 1.5rem;
-            /* Adjust as needed */
-        }
-
-        .logo {
-            padding-right: 2rem;
-        }
-
-        .logo {
-            height: 300px;
-            width: 300px;
-            margin-left: 0;
-            margin-bottom: 2rem;
-        }
-    }
-
-    .py-24 {
-        padding-top: 1rem;
-    }
-
-    .logo {
-        height: 550px;
-        width: 550px;
-        margin-left: 30px;
-    }
-
-    @media (max-width: 767px) {
-
-        .container.mx-auto.py-8 {
-            padding-left: 1.5rem;
-            /* Adjust as needed */
-            padding-right: 1.5rem;
-            /* Adjust as needed */
-        }
 
         .container-footer {
             padding-left: 1.5rem;
-            /* Adjust as needed */
             padding-right: 1.5rem;
-            /* Adjust as needed */
         }
 
     }
 
     .whatsapp {
         background-color: #576CBC;
-        height: 6.5vh;
-        width: 100%;
         color: white;
         font-weight: 800;
         font-size: 1.6rem;
         text-align: center;
-        margin: auto;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 0 auto;
+        padding: 10px 0;
+
     }
 
     .join-community {
         background: #25D366;
-        padding: 3px;
-        border-radius: 15px;
+        color: white;
         font-size: 1rem;
-        padding-right: 15px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        margin-left: 8px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
     }
 
     ion-icon {
-        font-size: 1.2rem;
-    }
-
-    @media (max-width: 767px) {
-        .whatsapp {
-            height: auto;
-            padding: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .join-community {
-            font-size: 0.8rem;
-            padding: 5px 10px;
-        }
-    }
-
-    /*p {
-        text-align: justify;
-    }*/
-    p {
-        padding-right: 50px;
+        font-size: 1rem;
     }
 </style>
 
@@ -206,38 +140,91 @@
     <!-- Navbar end -->
 
     <!-- About Us -->
-    <section class="container mx-auto px-4 py-24 bg-gray-900 text-white">
-        <div class="flex flex-col-reverse md:flex-row items-center justify-between">
-            <img src="./assests/logo/main-logo-dark-removebg-preview.png" alt="About Us"
-                class="logo w-64 h-64 rounded-lg shadow-md md:w-96 md:h-96 mb-8 md:mb-0">
-            <div class="md:w-1/2">
-                <h2 class="text-4xl font-bold text-gray-100 mb-4">About Us</h2>
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    Welcome to CodeINBlogs, a vibrant and inclusive community that empowers developers and programmers
-                    of all levels. We provide a supportive space for you to connect, share knowledge, and collaborate on
-                    exciting projects. Whether you're a beginner or an industry expert, our members actively engage in
-                    discussions, offering valuable insights and guidance to help each other succeed. Join us to tap into
-                    the power of collaboration and grow on your programming journey.
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 lg:py-20 bg-gray-900">
+        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <h2
+                class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+                <span class="relative inline-block">
+                    <svg viewBox="0 0 52 24" fill="currentColor"
+                        class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                        <defs>
+                            <pattern id="d0d83814-78b6-480f-9a5f-7f637616b267" x="0" y="0" width=".135" height=".30">
+                                <circle cx="1" cy="1" r=".7"></circle>
+                            </pattern>
+                        </defs>
+                        <rect fill="url(#d0d83814-78b6-480f-9a5f-7f637616b267)" width="52" height="24"></rect>
+                    </svg>
+                </span>
+                About Us
+            </h2>
+            <p class="text-base text-white md:text-lg">
+                Feel free to tailor and expand upon the following points to best represent the unique aspects of your
+                CodeINBlogs community
+            </p>
+        </div>
+        <div class="relative grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
+            <div class="absolute inset-0 flex items-center justify-center sm:hidden lg:flex">
+                <div class="w-px h-full bg-gray-300 lg:w-full lg:h-px"></div>
+            </div>
+            <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+                <div class="flex items-center justify-between mb-2">
+                    <p class="text-lg font-bold leading-5 text-black">Interactive Mentorship</p>
+                    <p
+                        class="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 bg-indigo-50">
+                        1
+                    </p>
+                </div>
+                <p class="text-sm text-gray-900 text-white">
+                    Connecting experienced developers with aspiring programmers for meaningful knowledge sharing and
+                    guidance.
                 </p>
-                <p class="text-lg text-gray-300 leading-relaxed mt-4">
-                    At CodeINBlogs, we believe in hands-on learning. Through hackathons and coding challenges, you can
-                    test your skills, learn from peers, and expand your programming horizons. We're dedicated to
-                    fostering a well-rounded community, where practical experiences are valued in becoming a better
-                    programmer.
+            </div>
+            <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+                <div class="flex items-center justify-between mb-2">
+                    <p class="text-lg font-bold leading-5 text-black">Diverse Skill Sets</p>
+                    <p
+                        class="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 bg-indigo-50">
+                        2
+                    </p>
+                </div>
+                <p class="text-sm text-gray-900 text-white">
+                    Celebrating diversity, our community offers a range of perspectives and experiences to foster
+                    learning.
                 </p>
-                <p class="text-lg text-gray-300 leading-relaxed mt-4">
-                    Join our vibrant community today and unlock a world of opportunities. Whether you're a novice or a
-                    seasoned developer, CodeINBlogs is the perfect place to learn, collaborate, and thrive. Together,
-                    let's code, grow, and create a brighter future in the tech industry.
+            </div>
+            <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+                <div class="flex items-center justify-between mb-2">
+                    <p class="text-lg font-bold leading-5 text-black">Practical Learning</p>
+                    <p
+                        class="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 bg-indigo-50">
+                        3
+                    </p>
+                </div>
+                <p class="text-sm text-gray-900 text-white">
+                    Emphasizing hands-on projects, coding challenges, and real-world examples for effective skill
+                    development.
+                </p>
+            </div>
+            <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+                <div class="flex items-center justify-between mb-2">
+                    <p class="text-lg font-bold leading-5 text-black">Collaborative Environment</p>
+                    <p
+                        class="flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 bg-indigo-50">
+                        4
+                    </p>
+                </div>
+                <p class="text-sm text-gray-900 text-white">
+                    Engage in open discussions, knowledge sharing, and supportive feedback to grow together as a
+                    community.
                 </p>
             </div>
         </div>
-    </section>
+    </div>
 
 
     <!-- Footer start -->
     <footer class="bg-white dark:bg-indigo-950">
-        <div class="container-footer py-12 mx-auto pl-28 pr-28">
+        <div class="container-footer py-12 mx-auto lg:pl-28 lg:pr-28">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
                 <div class="sm:col-span-2">
                     <h1 class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">
@@ -326,5 +313,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 </html>
