@@ -12,30 +12,29 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Anshul Soni, Kushagra Pandey">
-    <link href="blog.css">
+    <link rel="stylesheet" href="../blog.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="../assets/logos/bulb with lines.svg">
 
-    <link rel="stylesheet" href="blog.css">
-
-    <title>Why Is Computer Programming Important? - CodeIN Blogs </title>
-    <link rel="stylesheet" href="../style/output.css">
+    <title>Tackling Diverse Tasks with Neural Architecture Search - CodeIN Blogs </title>
+    <link rel="stylesheet" href="../../style/output.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
 
 <body class="dark">
     <main class="w-full h-full flex flex-col items-center justify-center accent text-white py-10 px-6">
         <!-- Header -->
-        <h1 class=" text-2xl sm:text-3xl md:text-4xl  font-semibold text-center ">Why Is Computer Programming Important?
-        </h1>
+        <h1 class=" text-2xl sm:text-3xl md:text-4xl  font-semibold text-center ">Tackling Diverse Tasks with Neural
+            Architecture Search </h1>
         <div class="author flex mt-4">
             <div class="w-[50px] h-[50px] foreground-secondary rounded-full">
                 <a href="https://www.linkedin.com/mwlite/in/vineet-jadhav-577a531b4"><img
-                        src="../assests/images/avatarman.png" alt="Anshul Soni"></a>
+                        src="../assests/images/avatarman.png" alt="Ameet Talwalkar"></a>
             </div>
             <div class="flex flex-col text-sm justify-center mx-2 font-medium">
-                <h1>Anshul Soni</h1>
-                <p>May 9, 2023
+                <h1>Ameet Talwalkar
+                </h1>
+                <p>Dec 7, 2022
                 </p>
             </div>
         </div>
@@ -50,16 +49,14 @@
                 <div class="overview">
 
                     <br>
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins">Computer programming is the lifeblood of
-                        modern life. Imagine for a moment what would happen if all computers suddenly disappeared
-                        tomorrow. No internet. No data. No connection. No convenience.
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">The past decade has witnessed the success of
+                        machine learning (ML) in solving diverse real-world problems, from facial recognition and
+                        machine translation to disease diagnosis and protein sequence prediction. However, progress in
+                        such areas has involved painstaking manual effort in designing and training task-specific neural
+                        networks, leveraging human and computational resources that most practitioners do not have
+                        access to.
 
-                        Computer programming is a fundamental skill for so many different applications, not just
-                        software development or cutting-edge research into artificial intelligence. It makes banking
-                        more accessible, smooths out supply lines, and creates those fantastic online experiences we
-                        love.
-                        <br><br>
-                        Computer programming offers many different benefits for the world, such as:
+
                     </p>
                 </div>
 
@@ -72,35 +69,56 @@
 
 
                     <p class="mt-4 text-lg md:text-xl font-normal poppins">
-                        1. Research and development: Research relies on data, and machines can help researchers
-                        aggregate, analyze, synthesize, and visualize data in ways human beings have not been capable of
-                        before. Programming skills allow people to build the vehicles that connect machines and humans.
-
-
-                        <br><br>
-                        2. Government operations: Coders are responsible for large portions of the government’s digital
-                        transformation. New online portals allow citizens, organizations, and businesses to access
-                        government services more efficiently.
-
-
+                        In contrast to this task-specific approach, general-purpose models such as DeepMind’s Perceiver
+                        IO and Gato and Google’s Pathway have been developed to solve more than one task at once.
+                        However, as these proprietary pretrained models are not publicly available, practitioners cannot
+                        even assess whether fine-tuning one of these models would work on their task of interest.
+                        Independently developing a general-purpose model from scratch is also infeasible due to the
+                        massive amount of compute and training data it requires.
                         <br><br>
 
-                        3.Web development and design: Designers leverage computer programming skills to build online
-                        experiences in fields like eCommerce or entertainment. These sites provide access to the
-                        information and services held within the digital world and rely on user research to create
-                        experiences.
+                        A more accessible alternative is the field of automated machine learning (AutoML), which aims to
+                        obtain high-quality models for diverse tasks with minimal human effort and computational
+                        resources, as noted in a recent blogpost. In particular, we can use Neural Architecture Search
+                        (NAS) to automate the design of neural networks for different learning problems.
+
                         <br><br>
-                        4. Marketing and business operations: Computer programmers can also help businesses manage
-                        operations by building apps and tools for internal use or customer-facing solutions.
+                        Indeed, compared with training large-scale transformer-based general-purpose models, many
+                        efficient NAS algorithms such as DARTS can be run on a single GPU and take a few hours to
+                        complete a simple task. However, while NAS has enabled fast and effective model development in
+                        well-studied areas such as computer vision, its application to domains beyond vision remains
+                        largely unexplored.
+
+                        <br><br>
+
+                        In fact, a major difficulty in applying NAS to more diverse problems is the trade-off between
+                        considering a sufficiently expressive set of neural networks and being able to efficiently
+                        search over this set. In this blog post, we will introduce our approach to find a suitable
+                        balance between expressivity and efficiency in NAS.
+                        <br><br>
+                        In our upcoming NeurIPS 2022 paper, we developed a NAS method called DASH that generates and
+                        trains task-specific convolutional neural networks (CNNs) with high prediction accuracy. Our
+                        core hypothesis is that for a broad set of problems (especially those with non-vision inputs
+                        such as audio and protein sequences), simply searching for the right kernel sizes and dilation
+                        rates for the convolutional layers in a CNN can achieve high-quality feature extraction and
+                        yield models competitive to expert-designed ones.
 
                         <br> <br>
-                        5.Data science and artificial intelligence: These exploding fields require software engineers to
-                        build environments suitable for processing and visualizing the data necessary to train models
-                        for data science and machine learning projects.
-                    </p>
+                        We explicitly focus on extending the generalization ability of CNNs due to the well known
+                        effectiveness of convolutions as feature extractors, coupled with recent work demonstrating the
+                        success of modern CNNs on a variety of tasks (e.g., the state-of-the-art performance of the
+                        ConvNeXt model that incorporates many techniques used by Transformers).
+                        <br> <br>
+                        In the following, we will first discuss how DASH is inspired by and differs from existing NAS
+                        work. Then, we will introduce three novel “tricks” that improve the efficiency of searching over
+                        a diverse kernel space. Finally, we will present the empirical evaluation to demonstrate DASH’s
+                        effectiveness.
 
+
+
+                    </p>
                     <br>
-                    <address>--Anshul Soni
+                    <address>Ameet Talwalkar
                     </address>
                     <b>
                         THANKS FOR READING IT, <br>
@@ -171,7 +189,7 @@
 
     <!-- Footer section start -->
     <footer class="bg-white dark:bg-indigo-950">
-        <div class="container-footer py-12 mx-auto pl-28 pr-28">
+        <div class="container-footer py-12 mx-auto lg:pl-28 lg:pr-28">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
                 <div class="sm:col-span-2">
                     <h1 class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">
@@ -193,18 +211,18 @@
                     <p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
-                        <a href="../index.html"
+                        <a href="../../index.html#Home"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
-                        <a href="../index.html#Blog"
+                        <a href="../../index.html#Blog"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Blog</a>
-                        <a href="../post.html"
+                        <a href="../../publish.html"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Publish
                             Article</a>
                     </div>
                 </div>
 
                 <div>
-                    <img src="../assests/logo/nav-logo-2-dark-removebg-preview copy.png" class="h-16 mr-3"
+                    <img src="../../assests/logo/nav-logo-2-dark-removebg-preview copy.png" class="h-16 mr-3"
                         alt="CodeInBlog" />
 
                     <div class="flex flex-col items-start mt-5 space-y-2">

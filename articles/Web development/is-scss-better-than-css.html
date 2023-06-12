@@ -1,9 +1,10 @@
+<!-- https://www.quora.com/Is-SCSS-better-than-CSS?q=is%20scss%20 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="CodeIN Blogs">
+    <meta name="title" a content="CodeIN Blogs">
     <meta name="description"
         content="It is a blogging platform that allows users to write and publish articles on a wide range of topics where you can write easily.">
     <meta name="keywords"
@@ -12,16 +13,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Anshul Soni, Kushagra Pandey">
-    <link href="blog.css">
+    <link rel="stylesheet" href="../blog.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="../assets/logos/bulb with lines.svg">
 
-    <link rel="stylesheet" href="blog.css">
-
-    <title>What is Coding- CodeIN Blogs </title>
-    <link rel="stylesheet" href="../style/output.css">
+    <title>Is SCSS better than CSS?
+        - CodeIN Blogs </title>
+    <link rel="stylesheet" href="../../style/output.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
+
 
 <body class="dark">
     <main class="w-full h-full flex flex-col items-center justify-center accent text-white py-10 px-6">
@@ -32,7 +33,7 @@
                 <img src="../assests/images/author1.png" alt="">
             </div>
             <div class="flex flex-col text-sm justify-center mx-2 font-medium">
-                <h1>Anshul Soni</h1>
+                <h1>Anshul Soni .</h1>
                 <p>Jan 27, 2023
                 </p>
             </div>
@@ -46,28 +47,26 @@
                 <!-- Overview of the post -->
 
 
-                <!--Great job-->
+                <div class="overview">
 
+
+                    <p class="text-lg md:text-xl font-normal poppins">Back in the days, people used to have a number of
+                        problems while writing CSS. SCSS (Sassy CSS) which is the most commonly used syntax for CSS was
+                        derived from SASS (Syntactically Awesome Style Sheets). SCSS is a special type of file for SASS,
+                        a program written in Ruby that assembles CSS style sheets for a browser.
+                    </p>
+                </div>
 
                 <!-- Main post starts -->
 
                 <div class="main-content "></div>
 
                 <div class="mt-6 section">
-                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold ">
-                        What is coding?
-                    </h1>
 
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins"> <span class="font-medium">
-                            <!--here-->
-                            Coding, sometimes called computer programming, is how we communicate with computers. Code
-                            tells a computer what actions to take, and writing code is like creating a set of
-                            instructions. By learning to write code, you can tell computers what to do or how to behave
-                            in a much faster way. You can use this skill to make websites and apps, process data, and do
-                            lots of other cool things.
 
-                        </span>
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins"> SCSS is like CSS with better formatting.
 
+                    </p>
 
 
 
@@ -75,20 +74,99 @@
 
                 </div>
                 <div class="mt-6 section">
-                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-semibold"> Why learn how to code?
+
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
+                        SCSS is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS
+                        as well. SCSS files use the extension .scss
+
+                        <br> <br>
+                        Being an extension of CSS3, in SCSS, we can add nested rules, variables, mixins, selector
+                        inheritance, and more. It’s translated to well-formatted, standard CSS using the command line
+                        tool or a web-framework plugin.
+
+                    </p>
+                    <br>
+                    <h1 class="text-xl sm:text-xl md:text-2xl xl:text-4xl font-semibold">CSS or SCSS - Which is better?
+
+
                     </h1>
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins">We all have hopes, dreams, and plans for the
-                        future. Whether you’re looking for a new opportunity, want to optimize your current job, or are
-                        simply searching for a new hobby, coding can help you get closer to your goals. And remember,
-                        anyone can learn how to code!
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
+                        CSS is the styling language which is used to style web pages and it is understandable by the
+                        browser. Using SCSS, we can add many additional functionalities to CSS such as variables,
+                        nesting and more. All these additional functionalities can make writing CSS much easier and
+                        faster as compared to writing the traditional CSS. SCSS produce a traditional CSS that the
+                        browser can understand by running the SCSS files on the server running your web app.
+
+
+                        <br> <br>
+                        Hundreds of programming languages exist, each with its own syntax and purpose. As with human
+                        languages, you’ll not find a single programming language you can use for all purposes.
+                    </p> <br>
+                    <h1 class="ext-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold">Advantages of using SCSS?
+
+
+                    </h1>
+                    <br>
+                    <ul class="mt-4 text-lg md:text-xl font-normal poppins">
+                        <li><b>• SCSS is more expressive
+                            </b> <br> We can compress several lines of code in SASS syntax into much less number of
+                            lines of SCSS. In SCSS, the standard lines can also be compressed when I'm doing something
+                            complicated and can be expanded again for reference.
+
+
+                        </li><br>
+                        <li><b>• It encourages proper nesting of rules
+                            </b>If you use the comma operator at a high level, it increases the file size of the final
+                            CSS. This can result in making the code really hard to perform overriding of rules.
+
+                        </li> <br>
+                        <li><b>• SCSS allows the user to write better inline documentation
+                            </b>SASS is flexible with comments, but any good developer will prefer inline documentation
+                            which is available in SCSS. Inline documentation makes the lines of code self-explanatory.
+
+
+                        </li>
+                        <br>
+                        <li><b>• Integrating existing CSS tools and CSS codebase is much easier
+                            </b>Syntax highlighting widely used CSS tool and is supported in SCSS. SCSS allows you to
+                            use the existing code, and help improve its internal structure without altering the external
+                            behavior of the code.
+
+
+                        </li> <br>
+
+                    </ul>
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
+                        Syntax highlighting widely used CSS tool and is supported in SCSS. SCSS allows you to use the
+                        existing code, and help improve its internal structure without altering the external behavior of
+                        the code.
+                        <br> <br> Additionally, SCSS allows us to declare and define variables, which finally helps us
+                        to normalize the code and reduce the redundancy. For example,
+                        <br> Instead of repeating #ff0000 many times in your CSS file, in SCSS, we can just set $red:
+                        #ff0000 once and use it as many times as we want.
+
+                        <br> <br> SCSS also supports the use of custom functions which accept parameters and are used to
+                        prevent unused repetitions. These functions are known as mixins.
+
+                        <br> <br> We can also inherit the properties of one selector into other selectors by making use
+                        of extensions.
+                        <br> <br>SCSS allows us to do math using operators. We can perform simple calculations inside
+                        our code for better output.
+
+
 
 
                     </p>
 
 
+                    <br> <br>
+                    <b>
+                        THANKS FOR READING IT, <br>
+                        CodeIN BLOGS
+                    </b>
+                    <br> <br>
                 </div>
             </div>
-            <!--Don't do changes in it(Below code) @Juhi Nagpure-->
             <div class="mt-10 lg:-mt-5 more-articles items-center">
                 <h1 class="my-4 text-3xl font-bold text-center">
                     More articles
@@ -142,7 +220,7 @@
 
     <!-- Footer section start -->
     <footer class="bg-white dark:bg-indigo-950">
-        <div class="container-footer py-12 mx-auto pl-28 pr-28">
+        <div class="container-footer py-12 mx-auto lg:pl-28 lg:pr-28">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
                 <div class="sm:col-span-2">
                     <h1 class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">
@@ -164,18 +242,18 @@
                     <p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
-                        <a href="../index.html"
+                        <a href="../../index.html#Home"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
-                        <a href="../index.html#Blog"
+                        <a href="../../index.html#Blog"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Blog</a>
-                        <a href="../post.html"
+                        <a href="../../publish.html"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Publish
                             Article</a>
                     </div>
                 </div>
 
                 <div>
-                    <img src="../assests/logo/nav-logo-2-dark-removebg-preview copy.png" class="h-16 mr-3"
+                    <img src="../../assests/logo/nav-logo-2-dark-removebg-preview copy.png" class="h-16 mr-3"
                         alt="CodeInBlog" />
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
@@ -227,6 +305,7 @@
             </div>
         </div>
     </footer>
+
 
 </body>
 

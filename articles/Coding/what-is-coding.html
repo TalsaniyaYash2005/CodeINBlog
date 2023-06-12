@@ -12,31 +12,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Anshul Soni, Kushagra Pandey">
-    <link href="blog.css">
+    <link rel="stylesheet" href="../blog.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="../assets/logos/bulb with lines.svg">
-
-    <link rel="stylesheet" href="blog.css">
-
-    <title>Tackling Diverse Tasks with Neural Architecture Search - CodeIN Blogs </title>
-    <link rel="stylesheet" href="../style/output.css">
+    <title>What is Coding- CodeIN Blogs </title>
+    <link rel="stylesheet" href="../../style/output.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
 
 <body class="dark">
     <main class="w-full h-full flex flex-col items-center justify-center accent text-white py-10 px-6">
         <!-- Header -->
-        <h1 class=" text-2xl sm:text-3xl md:text-4xl  font-semibold text-center ">Tackling Diverse Tasks with Neural
-            Architecture Search </h1>
+        <h1 class=" text-2xl sm:text-3xl md:text-4xl  font-semibold text-center ">What is Coding? </h1>
         <div class="author flex mt-4">
             <div class="w-[50px] h-[50px] foreground-secondary rounded-full">
-                <a href="https://www.linkedin.com/mwlite/in/vineet-jadhav-577a531b4"><img
-                        src="../assests/images/avatarman.png" alt="Ameet Talwalkar"></a>
+                <img src="../assests/images/author1.png" alt="">
             </div>
             <div class="flex flex-col text-sm justify-center mx-2 font-medium">
-                <h1>Ameet Talwalkar
-                </h1>
-                <p>Dec 7, 2022
+                <h1>Anshul Soni</h1>
+                <p>Jan 27, 2023
                 </p>
             </div>
         </div>
@@ -48,92 +42,53 @@
             <div class="w-full lg:w-[750px] lg:mr-16">
                 <!-- Overview of the post -->
 
-                <div class="overview">
 
-                    <br>
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins">The past decade has witnessed the success of
-                        machine learning (ML) in solving diverse real-world problems, from facial recognition and
-                        machine translation to disease diagnosis and protein sequence prediction. However, progress in
-                        such areas has involved painstaking manual effort in designing and training task-specific neural
-                        networks, leveraging human and computational resources that most practitioners do not have
-                        access to.
+                <!--Great job-->
 
-
-                    </p>
-                </div>
 
                 <!-- Main post starts -->
 
                 <div class="main-content "></div>
 
-
                 <div class="mt-6 section">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold ">
+                        What is coding?
+                    </h1>
 
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins"> <span class="font-medium">
+                            <!--here-->
+                            Coding, sometimes called computer programming, is how we communicate with computers. Code
+                            tells a computer what actions to take, and writing code is like creating a set of
+                            instructions. By learning to write code, you can tell computers what to do or how to behave
+                            in a much faster way. You can use this skill to make websites and apps, process data, and do
+                            lots of other cool things.
 
-                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
-                        In contrast to this task-specific approach, general-purpose models such as DeepMind’s Perceiver
-                        IO and Gato and Google’s Pathway have been developed to solve more than one task at once.
-                        However, as these proprietary pretrained models are not publicly available, practitioners cannot
-                        even assess whether fine-tuning one of these models would work on their task of interest.
-                        Independently developing a general-purpose model from scratch is also infeasible due to the
-                        massive amount of compute and training data it requires.
-                        <br><br>
-
-                        A more accessible alternative is the field of automated machine learning (AutoML), which aims to
-                        obtain high-quality models for diverse tasks with minimal human effort and computational
-                        resources, as noted in a recent blogpost. In particular, we can use Neural Architecture Search
-                        (NAS) to automate the design of neural networks for different learning problems.
-
-                        <br><br>
-                        Indeed, compared with training large-scale transformer-based general-purpose models, many
-                        efficient NAS algorithms such as DARTS can be run on a single GPU and take a few hours to
-                        complete a simple task. However, while NAS has enabled fast and effective model development in
-                        well-studied areas such as computer vision, its application to domains beyond vision remains
-                        largely unexplored.
-
-                        <br><br>
-
-                        In fact, a major difficulty in applying NAS to more diverse problems is the trade-off between
-                        considering a sufficiently expressive set of neural networks and being able to efficiently
-                        search over this set. In this blog post, we will introduce our approach to find a suitable
-                        balance between expressivity and efficiency in NAS.
-                        <br><br>
-                        In our upcoming NeurIPS 2022 paper, we developed a NAS method called DASH that generates and
-                        trains task-specific convolutional neural networks (CNNs) with high prediction accuracy. Our
-                        core hypothesis is that for a broad set of problems (especially those with non-vision inputs
-                        such as audio and protein sequences), simply searching for the right kernel sizes and dilation
-                        rates for the convolutional layers in a CNN can achieve high-quality feature extraction and
-                        yield models competitive to expert-designed ones.
-
-                        <br> <br>
-                        We explicitly focus on extending the generalization ability of CNNs due to the well known
-                        effectiveness of convolutions as feature extractors, coupled with recent work demonstrating the
-                        success of modern CNNs on a variety of tasks (e.g., the state-of-the-art performance of the
-                        ConvNeXt model that incorporates many techniques used by Transformers).
-                        <br> <br>
-                        In the following, we will first discuss how DASH is inspired by and differs from existing NAS
-                        work. Then, we will introduce three novel “tricks” that improve the efficiency of searching over
-                        a diverse kernel space. Finally, we will present the empirical evaluation to demonstrate DASH’s
-                        effectiveness.
+                        </span>
 
 
 
-                    </p>
-                    <br>
-                    <address>Ameet Talwalkar
-                    </address>
-                    <b>
-                        THANKS FOR READING IT, <br>
-                        CodeIN BLOGS
-                    </b>
-                    </p>
+
+
+
                 </div>
+                <div class="mt-6 section">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-semibold"> Why learn how to code?
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">We all have hopes, dreams, and plans for the
+                        future. Whether you’re looking for a new opportunity, want to optimize your current job, or are
+                        simply searching for a new hobby, coding can help you get closer to your goals. And remember,
+                        anyone can learn how to code!
 
 
+                    </p>
+
+
+                </div>
             </div>
+            <!--Don't do changes in it(Below code) @Juhi Nagpure-->
             <div class="mt-10 lg:-mt-5 more-articles items-center">
-                <h1 class="my-4 text-3xl font-bold text-center">More Articles
-
+                <h1 class="my-4 text-3xl font-bold text-center">
+                    More articles
                 </h1>
 
 
@@ -143,27 +98,18 @@
                     <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl ">
 
                         <img class="w-[250px] h-[150px] object-cover"
-                            src="https://codein-blogs.anshulsoni3.repl.co/assets/images/blog-6.jpg" alt="">
-                        <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">Will Chat GPT
-                            Replace Your Job As a Programmer?
-                        </div>
-                        <button class="view-more" role="button">
-                            <a href="./is-chatgpt-going-to-replace-programmers.html">View Full Article</a>
-                        </button>
-
-                    </div>
-
-                    <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl">
-
-                        <img class="w-[250px] h-[150px] object-cover" src="../assests/images/blog-3.png" alt="">
+                            src="https://2823d438-9de1-490e-9027-772b6790330d.id.repl.co/assets/images/blog-4.png"
+                            alt="">
                         <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">What is
-                            Coding?
+                            Machine
+                            Learning ?
                         </div>
                         <button class="view-more" role="button">
-                            <a href="./what-is-coding.html">View Full Article</a>
+                            <a href="articles/blog1.html">View Full Article</a>
                         </button>
 
                     </div>
+
                     <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl">
 
                         <img class="w-[250px] h-[150px] object-cover"
@@ -174,10 +120,12 @@
                             Learning ?
                         </div>
                         <button class="view-more" role="button">
-                            <a href="./what-is-machine-learning.html">View Full Article</a>
+                            <a href="articles/blog1.html">View Full Article</a>
                         </button>
 
                     </div>
+
+
 
 
                 </div>
@@ -191,7 +139,7 @@
 
     <!-- Footer section start -->
     <footer class="bg-white dark:bg-indigo-950">
-        <div class="container-footer py-12 mx-auto pl-28 pr-28">
+        <div class="container-footer py-12 mx-auto lg:pl-28 lg:pr-28">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
                 <div class="sm:col-span-2">
                     <h1 class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">
@@ -213,18 +161,18 @@
                     <p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
-                        <a href="../index.html"
+                        <a href="../../index.html#Home"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
-                        <a href="../index.html#Blog"
+                        <a href="../../index.html#Blog"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Blog</a>
-                        <a href="../post.html"
+                        <a href="../../publish.html"
                             class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Publish
                             Article</a>
                     </div>
                 </div>
 
                 <div>
-                    <img src="../assests/logo/nav-logo-2-dark-removebg-preview copy.png" class="h-16 mr-3"
+                    <img src="../../assests/logo/nav-logo-2-dark-removebg-preview copy.png" class="h-16 mr-3"
                         alt="CodeInBlog" />
 
                     <div class="flex flex-col items-start mt-5 space-y-2">
@@ -276,7 +224,6 @@
             </div>
         </div>
     </footer>
-
 
 </body>
 
